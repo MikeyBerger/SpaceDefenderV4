@@ -6,6 +6,7 @@ public class EnemyScript : MonoBehaviour
 {
     public float Speed;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,9 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Speed * Time.deltaTime);
+        
+
+        transform.Translate(Vector2.down * Speed * Time.deltaTime);
     }
 
 }

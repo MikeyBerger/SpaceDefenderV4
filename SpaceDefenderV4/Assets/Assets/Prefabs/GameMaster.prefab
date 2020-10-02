@@ -100,3 +100,8 @@ MonoBehaviour:
   HiScore: 0
   ScoreText: {fileID: 0}
   HiScoreText: {fileID: 0}
+  SpawnShips: 1
+  TheShip: {fileID: 5523299096663561528, guid: 77731e502f2744905bb75abfe5b92da2, type: 3}
+  Spawners:
+  - {fileID: 0}
+  - {fileID: 0}
