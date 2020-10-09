@@ -16,6 +16,6 @@ public class RightEnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(SS1.rotation.x, SS1.rotation.y, SS1.rotation.z) * Speed * Time.deltaTime);
+        transform.Translate(new Vector3(SS1.rotation.x, SS1.rotation.y, 0) * Speed * Time.deltaTime);
     }
 }

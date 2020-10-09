@@ -282,7 +282,6 @@ GameObject:
   - component: {fileID: 329471912}
   - component: {fileID: 329471915}
   - component: {fileID: 329471914}
-  - component: {fileID: 329471913}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -309,18 +308,6 @@ RectTransform:
   m_AnchoredPosition: {x: -80, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &329471913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329471911}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d8f7e5a38c44f0f9abb99774ac59e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &329471914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,7 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547379961e488447580dd742bc9da8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightShip: {fileID: 7949720638401456330, guid: a23ab770d6bc043c9a0373010611c6b2,
+  RightShip: {fileID: 3973850020257484247, guid: 7e1c3a72fcad143cc9258e92eab33c21,
     type: 3}
   MinLimit: 3
   MaxLimit: 15
@@ -1093,7 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae3290f1374d5461dbe89d2a349140fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightShip: {fileID: 5523299096663561528, guid: 77731e502f2744905bb75abfe5b92da2,
+  RightShip: {fileID: 4353576890846116579, guid: 5bd286e39cc474d5a945682b151d5ed3,
     type: 3}
   MinLimit: 3
   MaxLimit: 15
@@ -1502,6 +1489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3223039610939987805, guid: 5bd286e39cc474d5a945682b151d5ed3,
+        type: 3}
+      propertyPath: Speed
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 4353576890846116579, guid: 5bd286e39cc474d5a945682b151d5ed3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1804,7 +1796,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceCraft
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5617978978794160596, guid: dbdd4dc02c688470686f0a58c37657d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbdd4dc02c688470686f0a58c37657d9, type: 3}
 --- !u!1001 &6446594208797472416
 PrefabInstance:
@@ -1872,6 +1865,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446594209366326669, guid: 7e1c3a72fcad143cc9258e92eab33c21,
+        type: 3}
+      propertyPath: Speed
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e1c3a72fcad143cc9258e92eab33c21, type: 3}

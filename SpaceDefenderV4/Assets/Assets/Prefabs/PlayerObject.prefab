@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateVector: {x: 0, y: 0}
-  Speed: 50
+  Speed: 100
   JumpForce: 100000
   Reload: 1e-12
   BulletForce: 20
