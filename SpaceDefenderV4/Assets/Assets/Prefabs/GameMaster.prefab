@@ -105,3 +105,5 @@ MonoBehaviour:
   Spawners:
   - {fileID: 0}
   - {fileID: 0}
+  Timer: 0
+  Limit: 0

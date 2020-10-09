@@ -6,6 +6,10 @@ public class ShipCollision : MonoBehaviour
 {
     private Animator Anim;
     public float HitTime;
+    private float Health = 100;
+    private float Damage;
+    public float MinDamage;
+    public float MaxDamage;
 
     IEnumerator NotHit()
     {
@@ -22,7 +26,7 @@ public class ShipCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Damage = Random.Range(MinDamage, MaxDamage);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,6 +36,7 @@ public class ShipCollision : MonoBehaviour
             Destroy(collision.gameObject);
             Anim.SetBool("WasHit", true);
             StartCoroutine(NotHit());
+            Health -= Damage;
         }
     }
 }

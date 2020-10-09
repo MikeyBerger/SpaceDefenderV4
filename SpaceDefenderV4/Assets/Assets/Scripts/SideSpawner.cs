@@ -8,6 +8,7 @@ public class SideSpawner : MonoBehaviour
     public float Limit;
     public float SpawnTimer;
     public bool StartSpawning = false;
+    //public int MyScore;
     //private SaveSystemV2 SSV2 = new SaveSystemV2();
     private GameMaster GM;
 
@@ -22,28 +23,36 @@ public class SideSpawner : MonoBehaviour
     void Start()
     {
         GM = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
+        //MyScore = GM.Score;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         SpawnTimer += Time.deltaTime;
 
-        if (GM.Score == 10)
+        
+
+        if (MyScore == MyScore + 10)
         {
             StartSpawning = true;
-            Instantiate(Ships[0], transform.position, transform.rotation);
-            StartSpawning = false;
-        }
-
-        /*
-        if (StartSpawning)
-        {
-            Instantiate(Ships[0], transform.position, transform.rotation);
+            //Instantiate(Ships[0], transform.position, transform.rotation);
             //StartCoroutine(StopSpawning());
             //SpawnTimer = 0;
-            StartSpawning = false;
+            //StartSpawning = false;
         }
+
+
+        if (StartSpawning)
+        {
+            //StartSpawning = true;
+            StartCoroutine(StopSpawning());
+            StartSpawning = false;
         */
+
+        
+
+        
     }
 }

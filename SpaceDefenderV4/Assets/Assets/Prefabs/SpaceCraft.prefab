@@ -431,11 +431,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6275591339577583557}
-  - component: {fileID: 4928333928817327601}
   - component: {fileID: 2691615629896103238}
   m_Layer: 0
   m_Name: SideSpawner2
-  m_TagString: Untagged
+  m_TagString: SideSpawner2
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,24 +453,6 @@ Transform:
   m_Father: {fileID: 6009399518455862128}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
---- !u!114 &4928333928817327601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41793807637149877}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2807f48c0460547bfa6d7aca9bbfb451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinShip: 1
-  MaxShip: 1
-  SpawnTimer: 0
-  Limit: 3
-  EnemyShips:
-  - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
 --- !u!114 &2691615629896103238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,7 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ships:
   - {fileID: 5523299096663561528, guid: 77731e502f2744905bb75abfe5b92da2, type: 3}
-  Limit: 2
+  Limit: 15
   SpawnTimer: 0
   StartSpawning: 0
 --- !u!1 &6009399517482904405
@@ -873,11 +854,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7337275626345924878}
-  - component: {fileID: 6974205060422197304}
   - component: {fileID: 5617978978794160596}
   m_Layer: 0
   m_Name: SideSpawner1
-  m_TagString: Untagged
+  m_TagString: SideSpawner1
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -896,24 +876,6 @@ Transform:
   m_Father: {fileID: 6009399518455862128}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
---- !u!114 &6974205060422197304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7450925504528063536}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2807f48c0460547bfa6d7aca9bbfb451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinShip: 1
-  MaxShip: 1
-  SpawnTimer: 0
-  Limit: 3
-  EnemyShips:
-  - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
 --- !u!114 &5617978978794160596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,6 +890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ships:
   - {fileID: 5523299096663561528, guid: 77731e502f2744905bb75abfe5b92da2, type: 3}
-  Limit: 2
+  Limit: 15
   SpawnTimer: 0
   StartSpawning: 0

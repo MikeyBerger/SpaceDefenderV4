@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Laser
   - Parallax
+  - SideSpawner1
+  - SideSpawner2
   layers:
   - Default
   - TransparentFX

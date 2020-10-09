@@ -13,10 +13,13 @@ public class GameMaster : MonoBehaviour
     public Text ScoreText;
     public Text HiScoreText;
     public bool SpawnShips = true;
+    public Transform[] Ships;
     public Transform TheShip;
     public Transform[] Spawners;
     private Transform TheSpawner;
     private int RandSpawner;
+    public float Timer;
+    public float Limit;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,10 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        Timer += Time.deltaTime;
+
+        SpawnShips = true;
+
         RandSpawner = Random.Range(0, 100);
 
         if (RandSpawner <= 50)
@@ -48,15 +55,21 @@ public class GameMaster : MonoBehaviour
         ScoreText.text = "Score: " + Score.ToString();
         HiScoreText.text = "HighScore: " + HiScore.ToString();
 
-        SpawnSideShips();
+        //SpawnSideShips();
     }
 
     void SpawnSideShips()
     {
-        if (Score == 10 && SpawnShips == true)
+        if (Timer >= Limit)
         {
-            Instantiate(TheShip, TheSpawner.position, TheSpawner.rotation);
-            SpawnShips = false;
+
+            if (SpawnShips)
+            {
+                Instantiate(TheShip, TheSpawner.position, TheSpawner.rotation);
+                SpawnShips = false;
+            }
+
+            Timer = 0;
         }
     }
 }
