@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public GameObject PauseMenuUI;
     Quaternion Rotation;
     public LayerMask WhatToHit;
+    private ShipCollision SC;
     
     
     
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SC = GameObject.FindGameObjectWithTag("Ship").GetComponent<ShipCollision>();
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         FacingRight = true;
@@ -195,10 +197,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void PauseGame()
-    {
 
-    }
     #endregion
 
     #region InputActions
@@ -248,7 +247,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        AirBorn = false;
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SC.Health = SC.Health - SC.Damage;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SC.Health = SC.Health - SC.Damage;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

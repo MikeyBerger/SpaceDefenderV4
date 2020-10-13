@@ -9,11 +9,12 @@ public class RightSpawner : MonoBehaviour
     private float Limit;
     public float MinLimit;
     public float MaxLimit;
+    private WaveCycler WC;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        WC = GameObject.FindGameObjectWithTag("Ship").GetComponent<WaveCycler>();
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class RightSpawner : MonoBehaviour
 
     void SpawnShip()
     {
-        if (Timer >= Limit)
+        if (Timer >= Limit && WC.SpawnDiagonal)
         {
             Instantiate(RightShip, transform.position, transform.rotation);
             Timer = 0;

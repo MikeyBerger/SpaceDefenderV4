@@ -12,6 +12,7 @@ public class SideEnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         RandSpawner = Random.Range(0, 100);
 
         if (RandSpawner < 50)
@@ -22,6 +23,7 @@ public class SideEnemyScript : MonoBehaviour
         {
             TheSpawner = Spawners[1];
         }
+        */
        
     }
 

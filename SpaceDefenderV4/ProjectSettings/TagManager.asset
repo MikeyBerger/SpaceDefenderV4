@@ -11,6 +11,7 @@ TagManager:
   - Parallax
   - SideSpawner1
   - SideSpawner2
+  - Ship
   layers:
   - Default
   - TransparentFX

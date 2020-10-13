@@ -1,0 +1,74 @@
+{
+    "name": "GameOverCursor",
+    "maps": [
+        {
+            "name": "GameOverMap",
+            "id": "2dff9ee5-1ce6-45c0-b85c-659a5c08cf8f",
+            "actions": [
+                {
+                    "name": "PlayAgain",
+                    "type": "Button",
+                    "id": "1d2197bc-384b-4eea-bbf0-dbc57adad7d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Return",
+                    "type": "Button",
+                    "id": "de7b89df-535d-49da-a7d2-c65f7d59ea8e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a29ca431-8f60-4994-8fad-e501202bb77c",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayAgain",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33a50115-80ef-439a-8104-030018ffc81e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayAgain",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "61a52ad1-da6c-41b1-bb90-55f5728a8e04",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Return",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3809e156-3900-4b9a-ab6f-895d1060bd9b",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Return",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

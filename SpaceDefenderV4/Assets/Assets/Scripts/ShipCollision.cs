@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipCollision : MonoBehaviour
 {
     private Animator Anim;
     public float HitTime;
-    private float Health = 100;
-    private float Damage;
+    public float Health = 100;
+    public float Damage;
     public float MinDamage;
     public float MaxDamage;
+    public string GameOverScene;
 
     IEnumerator NotHit()
     {
@@ -27,6 +29,11 @@ public class ShipCollision : MonoBehaviour
     void Update()
     {
         Damage = Random.Range(MinDamage, MaxDamage);
+
+        if (Health <= 0)
+        {
+            SceneManager.LoadScene(GameOverScene);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

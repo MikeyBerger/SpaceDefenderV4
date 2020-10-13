@@ -432,8 +432,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6275591339577583557}
   - component: {fileID: 2691615629896103238}
+  - component: {fileID: 879743890}
   m_Layer: 0
-  m_Name: SideSpawner2
+  m_Name: DiagonalSpawner2
   m_TagString: SideSpawner2
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -460,7 +461,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41793807637149877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a459eb398e3054915a2d3c383c45dbd6, type: 3}
   m_Name: 
@@ -470,6 +471,85 @@ MonoBehaviour:
   Limit: 15
   SpawnTimer: 0
   StartSpawning: 0
+--- !u!114 &879743890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41793807637149877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547379961e488447580dd742bc9da8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RightShip: {fileID: 7949720638401456330, guid: 2f33bf26ddd2e4465af016735a912cf1,
+    type: 3}
+  MinLimit: 3
+  MaxLimit: 15
+--- !u!1 &5577569179205349722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57970141525178996}
+  - component: {fileID: 3185710966001481347}
+  - component: {fileID: 1117501011}
+  m_Layer: 0
+  m_Name: HorizontalSpawner1
+  m_TagString: SideSpawner1
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &57970141525178996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577569179205349722}
+  m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: -0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 0.374, y: 0.069, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6009399518455862128}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -45}
+--- !u!114 &3185710966001481347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577569179205349722}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3290f1374d5461dbe89d2a349140fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RightShip: {fileID: 5523299096663561528, guid: dcdf3518660ad442983f39bde840d8fe,
+    type: 3}
+  MinLimit: 3
+  MaxLimit: 15
+--- !u!114 &1117501011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577569179205349722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec3df4b162a1477a86edf1dbbea4daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyShip: {fileID: 5601831225702157012, guid: b27718106cccc439796cd0530a182e9e,
+    type: 3}
+  Limit: 5
 --- !u!1 &6009399517482904405
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,9 +663,10 @@ GameObject:
   - component: {fileID: 6009399518455862131}
   - component: {fileID: 8257304810761488910}
   - component: {fileID: 829363545}
+  - component: {fileID: 1629457868}
   m_Layer: 0
   m_Name: SpaceCraft
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -613,6 +694,8 @@ Transform:
   - {fileID: 1091196968}
   - {fileID: 7337275626345924878}
   - {fileID: 6275591339577583557}
+  - {fileID: 57970141525178996}
+  - {fileID: 8906606393581313805}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -725,6 +808,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitTime: 2
+  Health: 100
+  Damage: 0
+  MinDamage: 10
+  MaxDamage: 30
+  GameOverScene: GameOverScene
 --- !u!50 &829363545
 Rigidbody2D:
   serializedVersion: 4
@@ -746,6 +834,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1629457868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009399518455862143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab40a8dadfe648b4aa46fe972530aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VerticalSpawners:
+  - {fileID: 318071625}
+  - {fileID: 2082507757}
+  - {fileID: 777112462}
+  DiagonalSpawners:
+  - {fileID: 7337275626345924878}
+  - {fileID: 6275591339577583557}
+  HorizontalSpawners:
+  - {fileID: 57970141525178996}
+  - {fileID: 8906606393581313805}
+  VerticalEnemy: {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c,
+    type: 3}
+  LeftDiagonalEnemy: {fileID: 7949720638401456330, guid: 2f33bf26ddd2e4465af016735a912cf1,
+    type: 3}
+  RightDiagonalEnemy: {fileID: 5523299096663561528, guid: dcdf3518660ad442983f39bde840d8fe,
+    type: 3}
+  HorizontalEnemy1: {fileID: 5601831225702157012, guid: b27718106cccc439796cd0530a182e9e,
+    type: 3}
+  HorizontalEnemy2: {fileID: 4320307713578580404, guid: b919fc12db8344484b31832946cb457b,
+    type: 3}
+  SpawnVertical: 0
+  SpawnDiagonal: 0
+  SpawnHorizontal: 0
+  RandWave: 0
+  Limit: 3
 --- !u!1 &6009399518537339379
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +970,71 @@ MonoBehaviour:
   MaxSize: 1.3
   DestroyLimit: 0
   DestroyTimer: 0
+--- !u!1 &6533397065344874360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8906606393581313805}
+  - component: {fileID: 7194705088710008604}
+  - component: {fileID: 1985575889507582411}
+  m_Layer: 0
+  m_Name: HorizontalSpawner2
+  m_TagString: SideSpawner2
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8906606393581313805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533397065344874360}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -0.374, y: 0.06899998, z: 0}
+  m_LocalScale: {x: 0.025, y: 0.033333335, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6009399518455862128}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!114 &7194705088710008604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533397065344874360}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a459eb398e3054915a2d3c383c45dbd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ships:
+  - {fileID: 5523299096663561528, guid: 77731e502f2744905bb75abfe5b92da2, type: 3}
+  Limit: 15
+  SpawnTimer: 0
+  StartSpawning: 0
+--- !u!114 &1985575889507582411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533397065344874360}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547379961e488447580dd742bc9da8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RightShip: {fileID: 7949720638401456330, guid: 2f33bf26ddd2e4465af016735a912cf1,
+    type: 3}
+  MinLimit: 3
+  MaxLimit: 15
 --- !u!1 &7450925504528063536
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,9 +1044,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7337275626345924878}
-  - component: {fileID: 5617978978794160596}
+  - component: {fileID: 1410200460}
   m_Layer: 0
-  m_Name: SideSpawner1
+  m_Name: DiagonalSpawner1
   m_TagString: SideSpawner1
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -876,7 +1066,7 @@ Transform:
   m_Father: {fileID: 6009399518455862128}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
---- !u!114 &5617978978794160596
+--- !u!114 &1410200460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -885,11 +1075,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7450925504528063536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a459eb398e3054915a2d3c383c45dbd6, type: 3}
+  m_Script: {fileID: 11500000, guid: ae3290f1374d5461dbe89d2a349140fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ships:
-  - {fileID: 5523299096663561528, guid: 77731e502f2744905bb75abfe5b92da2, type: 3}
-  Limit: 15
-  SpawnTimer: 0
-  StartSpawning: 0
+  RightShip: {fileID: 5523299096663561528, guid: dcdf3518660ad442983f39bde840d8fe,
+    type: 3}
+  MinLimit: 3
+  MaxLimit: 15
