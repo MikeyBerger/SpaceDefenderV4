@@ -11,11 +11,19 @@ public class SpawnScriptV2 : MonoBehaviour
     public float Limit;
     public Transform[] EnemyShips;
     private WaveCycler WC;
+    private bool StartSpawn;
+
+    IEnumerator SpawnShips()
+    {
+        yield return new WaitForSeconds(1f);
+        StartSpawn = true;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         WC = GameObject.FindGameObjectWithTag("Ship").GetComponent<WaveCycler>();
+        StartCoroutine(SpawnShips());
     }
 
     // Update is called once per frame
@@ -25,7 +33,7 @@ public class SpawnScriptV2 : MonoBehaviour
 
         SpawnTimer += Time.deltaTime;
 
-        if (SpawnTimer >= Limit && WC.SpawnVertical)
+        if (SpawnTimer >= Limit && WC.SpawnVertical && StartSpawn)
         {
             Instantiate(EnemyShips[0], transform.position, transform.rotation);
             SpawnTimer = 0;

@@ -9,8 +9,8 @@ public class OptionCursorScript : MonoBehaviour
 
     Vector2 Movement;
     public float Speed;
-    private MainMenuButtonScript MMBS;
-    private ResetButtonScript RBS;
+    private MainMenuButtonScriptV2 MMBS;
+    private ResetButtonScriptV2 RBS;
     private SaveSystemV2 SSV2;
     private Rigidbody2D RB;
     public string MainMenu;
@@ -18,8 +18,8 @@ public class OptionCursorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MMBS = GameObject.FindGameObjectWithTag("MainMenuButton").GetComponent<MainMenuButtonScript>();
-        RBS = GameObject.FindGameObjectWithTag("ResetButton").GetComponent<ResetButtonScript>();
+        MMBS = GameObject.FindGameObjectWithTag("MainMenuButton").GetComponent<MainMenuButtonScriptV2>();
+        RBS = GameObject.FindGameObjectWithTag("ResetButton").GetComponent<ResetButtonScriptV2>();
         SSV2 = new SaveSystemV2();
         RB = GetComponent<Rigidbody2D>();
     }

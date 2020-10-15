@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 0
-  m_MaxPlayerCount: 2
+  m_MaxPlayerCount: -1
   m_AllowJoining: 1
   m_JoinBehavior: 1
   m_PlayerJoinedEvent:
@@ -101,9 +101,10 @@ MonoBehaviour:
   ScoreText: {fileID: 0}
   HiScoreText: {fileID: 0}
   SpawnShips: 1
+  Ships: []
   TheShip: {fileID: 5523299096663561528, guid: 77731e502f2744905bb75abfe5b92da2, type: 3}
   Spawners:
   - {fileID: 0}
   - {fileID: 0}
   Timer: 0
-  Limit: 0
+  Limit: 3

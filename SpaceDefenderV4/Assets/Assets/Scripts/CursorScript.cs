@@ -9,8 +9,8 @@ public class CursorScript : MonoBehaviour
     Vector2 Movement;
     public float Speed;
     private MainMenuButtonScript MMBS;
-    private PlayButtonScriptV3 PBSV3;
-    private OptionButtonScript OBS;
+    private PlayButtonV5 PBSV5;
+    private OptionButtonV2 OB;
     private ResetButtonScript RBS;
     private SaveSystemV2 SSV2;
     private Rigidbody2D RB;
@@ -25,8 +25,8 @@ public class CursorScript : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         //MMBS = GameObject.FindGameObjectWithTag("MainMenuButton").GetComponent<MainMenuButtonScript>();
         SSV2 = new SaveSystemV2();
-        PBSV3 = GameObject.FindGameObjectWithTag("PlayButton").GetComponent<PlayButtonScriptV3>();
-        OBS = GameObject.FindGameObjectWithTag("OptionButton").GetComponent<OptionButtonScript>();
+        PBSV5 = GameObject.FindGameObjectWithTag("PlayButton").GetComponent<PlayButtonV5>();
+        OB = GameObject.FindGameObjectWithTag("OptionButton").GetComponent<OptionButtonV2>();
         //RBS = GameObject.FindGameObjectWithTag("ResetButton").GetComponent<ResetButtonScript>();
         
     }
@@ -35,12 +35,12 @@ public class CursorScript : MonoBehaviour
     void Update()
     {
         
-        if (PBSV3.PlayIsPressed && ButtonIsPressed)
+        if (PBSV5.PlayIsPressed && ButtonIsPressed)
         {
             SceneManager.LoadScene(PlayScene);
         }
 
-        if (OBS.OptionIsPressed && ButtonIsPressed)
+        if (OB.OptionIsPressed && ButtonIsPressed)
         {
             SceneManager.LoadScene(OptionScene);
         }

@@ -29,5 +29,13 @@ public class PlayerColor : MonoBehaviour
         {
             SR.color = Color.blue;
         }
+        else if (PI.playerIndex == 2)
+        {
+            SR.color = Color.green;
+        }
+        else if (PI.playerIndex == 3)
+        {
+            SR.color = Color.yellow;
+        }
     }
 }
